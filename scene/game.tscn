@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbpfh2ragq80s"]
+[gd_scene load_steps=10 format=3 uid="uid://bbpfh2ragq80s"]
 
 [ext_resource type="PackedScene" uid="uid://dmyw62klrqvmu" path="res://scene/player.tscn" id="1_5kiuu"]
 [ext_resource type="Texture2D" uid="uid://bnhavtsfnpkba" path="res://assets/sprites/world_tileset.png" id="1_dbls1"]
 [ext_resource type="PackedScene" uid="uid://cd71rb1rh421r" path="res://scene/platform.tscn" id="3_33cqm"]
+[ext_resource type="PackedScene" uid="uid://dtolmaedqnr25" path="res://scene/coin.tscn" id="4_xwcet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_33cqm"]
 texture = ExtResource("1_dbls1")
@@ -177,6 +178,21 @@ texture = ExtResource("1_dbls1")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_33cqm")
 
+[sub_resource type="Animation" id="Animation_xwcet"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(336, 21)]
+}
+
 [sub_resource type="Animation" id="Animation_33cqm"]
 resource_name = "move"
 length = 1.5
@@ -192,21 +208,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(336, 21), Vector2(432, 21)]
-}
-
-[sub_resource type="Animation" id="Animation_xwcet"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(336, 21)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p1ry8"]
@@ -241,3 +242,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_p1ry8")
 }
 autoplay = "move"
+
+[node name="Coin" parent="." instance=ExtResource("4_xwcet")]
+position = Vector2(40, 40)
