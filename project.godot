@@ -15,6 +15,10 @@ run/main_scene="uid://bbpfh2ragq80s"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Music="*res://scene/music.tscn"
+
 [input]
 
 ui_left={
