@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="second-game"
+config/name="princess dragon slayer"
 run/main_scene="uid://bbpfh2ragq80s"
 config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://dff6w4xrc1qcy"
 
 [autoload]
 
